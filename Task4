@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Web Application</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker registered'))
+                .catch(err => console.error('Service Worker registration failed:', err));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My PWA</h1>
+        <h1>Hi I am Kishan</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Offline Support</li>
+                <li>Add to Home Screen</li>
+                <li>Fast Loading</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Content</h2>
+            <p>This is a simple Progressive Web Application (PWA) example.</p>
+        </section>
+    </main>
+
+    
+</body>
+</html>
